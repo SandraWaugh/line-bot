@@ -39,10 +39,19 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg:event.message.text
-    s = "How are you"
+    s = "I do not know what you are talking about"
+
+    if msg == "hi":
+        r == "hi"
+    if msg == "Hi":
+        r == "Hi"
+    elif msg == "ぶひ"
+        r == "豚君"
+
+
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=s))
+        TextSendMessage(text= r ))
 
 
 if __name__ == "__main__":    #執行main function的時候，來確定該檔案是直接被執行，而不是被載入而已
