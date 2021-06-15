@@ -42,10 +42,10 @@ def handle_message(event):
     r = ""
 
     if msg == "hi":
-        r == "hi"
+        r = "hi"
     
     elif msg == "ぶひ":
-        r == "豚君"
+        r = "豚君"
 
 
     line_bot_api.reply_message(
