@@ -39,12 +39,11 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg:event.message.text
-    r == ""
+    r = ""
 
     if msg == "hi":
         r == "hi"
-    if msg == "Hi":
-        r == "Hi"
+    
     elif msg == "ぶひ":
         r == "豚君"
 
