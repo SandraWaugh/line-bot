@@ -45,7 +45,7 @@ def handle_message(event):
         r == "hi"
     if msg == "Hi":
         r == "Hi"
-    elif msg == "ぶひ"
+    elif msg == "ぶひ":
         r == "豚君"
 
 
