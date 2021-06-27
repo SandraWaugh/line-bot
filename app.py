@@ -39,7 +39,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg:event.message.text
-    r = ""
+    r = "I do not know"
 
     if msg == "hi":
         r = "hi"
