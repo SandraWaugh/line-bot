@@ -40,6 +40,16 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     r = msg
+    if "sticker" in msg:
+        sticker_message = StickerSendMessage(
+            package_id='1',
+            sticker_id='1'
+        )
+        line_bot_api.reply_message(
+        event.reply_token,
+        sticker_message)
+
+        return 
 
     if msg in ["hi","Hi"]:
         r = "hi"
@@ -51,13 +61,11 @@ def handle_message(event):
     elif msg == "Who are you":
         r = "I am Robot."
 
+   
 
     line_bot_api.reply_message(
         event.reply_token,
-        StickerSendMessage(
-            package_id='1',
-            sticker_id='1'
-))
+        TextSendMessage(text=r))
 
 
 if __name__ == "__main__":    #執行main function的時候，來確定該檔案是直接被執行，而不是被載入而已
